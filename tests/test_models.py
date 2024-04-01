@@ -140,7 +140,7 @@ class TestProductModel(unittest.TestCase):
         """It should raise DataValidationError when updating a product with no ID"""
         product = ProductFactory()
         product.id = None
-        
+
         # Ensure calling update() without an ID raises DataValidationError
         with self.assertRaises(DataValidationError):
             product.update()
